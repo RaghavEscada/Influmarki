@@ -1,13 +1,10 @@
-"use client"; // Mark this as a client component
+"use client";
 
-import { useState } from "react";
-import { FaInfoCircle, FaClipboardList, FaBriefcase, FaPhoneAlt } from "react-icons/fa"; // Importing icons from React Icons
-import { PlaceholdersAndVanishInput } from "./components/ui/placeholders-and-vanish-input"; // Assuming this component is defined
-import Image from "next/image"; // Importing the Image component from Next.js
+import { FaInfoCircle, FaClipboardList, FaBriefcase, FaPhoneAlt } from "react-icons/fa";
+import { PlaceholdersAndVanishInput } from "./components/ui/placeholders-and-vanish-input";
+import Image from "next/image";
 
 export default function Home() {
-  const [inputValue, setInputValue] = useState("");
-
   const placeholders = [
     "I need a Logo!",
     "Can you photoshoot my Studio?",
@@ -17,7 +14,6 @@ export default function Home() {
   ];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(e.target.value); // Update state with input value
     console.log(e.target.value);
   };
 
@@ -40,7 +36,7 @@ export default function Home() {
       </div>
 
       <h2 className="mb-10 sm:mb-20 text-xl text-center sm:text-2xl dark:text-black text-black">
-      Influmarki is a creative agency that builds strong brands through innovative design and marketing.
+        Influmarki is a creative agency that builds strong brands through innovative design and marketing.
       </h2>
       
       <PlaceholdersAndVanishInput
